@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 import '../components/Chirpadder.css';
 let moment = require('moment');
-// import App from './app';
+
+
 
 
 
@@ -27,7 +28,7 @@ const Chirpadder = () => {
         console.log(userinfo);
        if(username&&usermessage){
            setTweetList((tweetlist)=>[...tweetlist,userinfo]);
-           setUserName("");  //ls
+           setUserName("");  
            setUserMessage("");
        }
        
@@ -37,6 +38,7 @@ const Chirpadder = () => {
    
  return (
     <div className='chirpdiv'>
+        <section className='main-title'><h3 >Welcome To Chirp. The lastest way to communicate.</h3></section>
         <section className='chirpadd'>
      <form onSubmit={Submit}>
          <h3 >Add Your Chirp to the ChirpVerse Today</h3>
